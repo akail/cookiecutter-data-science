@@ -17,11 +17,19 @@ Project Organization
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
+    ├── .gitignore         <- Avoids uploading data, credentials, outputs, system files, etc
+    │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │   │                     the creator's initials, and a short `-` delimited description, e.g.
+    │   │                     `1.0-jqp-initial-data-exploration`.
+    │   │
+    │   ├── README.md      <- README with specific information related to using notebooks
+    │   ├── eda            <- Exploratory Data Analysis.  For short term usage
+    │   ├── poc            <- Proof of concept
+    │   ├── modeling       <- Model building and training
+    │   └── evaluation     <- How good is the model
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
@@ -31,9 +39,14 @@ Project Organization
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
+    ├── test_requirements.txt <- The requirements file for automated test running
+    │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    │
+    ├── scripts            <- Reusable but independent python and bash scripts
+    │
+    ├── {{ cookiecutter.module_name }}                <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes {{ cookiecutter.module_name }} a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
@@ -48,6 +61,8 @@ Project Organization
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
+    │
+    ├── tests              <- Unit and functional tests using pytest
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
